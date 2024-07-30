@@ -1,3 +1,5 @@
+# FEITO PARA SER UTILIZADO EM GOOGLE COLAB
+
 from google.colab import drive
 drive.mount('/content/drive')
 # pip install
@@ -16,16 +18,13 @@ import pytz
 import numpy as np
 import requests
 import json
+import os
 
 # Configurações de conexão ao Broker MQTT
 broker = 'mqtt.eclipseprojects.io'
 port = 1883
 topic_subscribe = "esp32/inputs/#"
 client_id = 'BROKER_PC_SUB'
-
-# Inicializa o DataFrame para armazenar os dados
-data = {'Datetime': [], 'Topic': [], 'Payload': [], 'Capacidade': []}
-df = pd.DataFrame(data)
 
 # Fuso horário desejado ('America/Sao_Paulo')
 desired_timezone = 'America/Sao_Paulo'
@@ -66,9 +65,8 @@ def on_message(client, userdata, msg):
     # Verifica se o tópico está mapeado no dicionário
     if msg.topic in topicos_capacidades:
         # Adiciona os dados ao DataFrame
-        timestamp = datetime.now()
-        timestamp = local_timezone.localize(timestamp)
-        datetime_str = timestamp.strftime('%Y-%m-%d %H:%M:%S')
+        timestamp = datetime.now(pytz.utc).astimezone(local_timezone)
+        datetime_str = timestamp.strftime('%m-%d-%Y %H:%M:%S')
         payload = msg.payload.decode()
         df.loc[len(df.index)] = [datetime_str, msg.topic, payload, topicos_capacidades[msg.topic]]
 
@@ -79,18 +77,13 @@ def on_message(client, userdata, msg):
 
 # Função para salvar os dados no CSV no Google Drive
 def save_to_drive():
-
-    # Carrega o arquivo CSV existente, se existir
-    try:
-        existing_df = pd.read_csv(csv_path)
-    except FileNotFoundError:
-        existing_df = pd.DataFrame()
-
-    # Concatena os DataFrames existentes e novos
-    updated_df = pd.concat([existing_df, df], ignore_index=True)
-
-    # Salva o DataFrame no arquivo CSV
-    updated_df.to_csv(csv_path, index=False)
+    # Verifica se o arquivo CSV já existe
+    if not os.path.isfile(csv_path):
+        # Se não existir, cria o arquivo CSV e escreve o cabeçalho com a última linha do df
+        df.tail(1).to_csv(csv_path, mode='w', index=False)
+    else:
+        # Se existir, adiciona a última linha do df ao arquivo CSV
+        df.tail(1).to_csv(csv_path, mode='a', header=False, index=False)
 
 def show_capacidades():
     r = requests.get(api+'/catalog/capabilities')
@@ -238,7 +231,6 @@ def run():
     client.loop_start()
     time.sleep(30)  # Executa por 60 segundos, ajuste conforme necessário
     client.loop_stop()
-    save_to_drive()
 
     # Pergunta se quer prosseguir para o consumo dos dados pela API Interscity
     resposta = input("Deseja prosseguir para o consumo dos dados pela API Interscity? (Digite 'sim' para prosseguir): ")
@@ -250,4 +242,9 @@ def run():
         print("Operação cancelada pelo usuário.")
 
 if __name__ == '__main__':
+    # Inicializa o DataFrame para armazenar os dados
+    global data
+    data = {'Datetime': [], 'Topic': [], 'Payload': [], 'Capacidade': []}
+    global df
+    df = pd.DataFrame(data)
     run()
