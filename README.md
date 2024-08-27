@@ -1,33 +1,35 @@
 # Estacionamento Inteligente
-Estacionamento Inteligente com Integração Interscity 
+
+Estacionamento Inteligente com Integraï¿½ï¿½o Interscity
 
 ## Sobre o Projeto
 
 <div style="text-align: justify">
-Estacionamento Inteligente com Integração Interscity é uma iniciativa que visa transformar a maneira como os estacionamentos urbanos são gerenciados e como os motoristas interagem com eles, por meio do desenvolvimento de uma simulação de rede de computadores para um sistema de estacionamento inteligente que integra um microcontrolador, o qual envia os dados para a plataforma Interscity, atualizando o status de ocupação das vagas. Dessa forma, busca-se otimizar a alocação de vagas, melhorar a experiência dos usuários e contribuir para a redução do congestionamento urbano. Neste projeto, exploraremos como a integração desses componentes pode criar uma solução inteligente e eficaz para o estacionamento nas cidades, beneficiando tanto os motoristas quanto a gestão urbana.
+Estacionamento Inteligente com Integraï¿½ï¿½o Interscity ï¿½ uma iniciativa que visa transformar a maneira como os estacionamentos urbanos sï¿½o gerenciados e como os motoristas interagem com eles, por meio do desenvolvimento de uma simulaï¿½ï¿½o de rede de computadores para um sistema de estacionamento inteligente que integra um microcontrolador, o qual envia os dados para a plataforma Interscity, atualizando o status de ocupaï¿½ï¿½o das vagas. Dessa forma, busca-se otimizar a alocaï¿½ï¿½o de vagas, melhorar a experiï¿½ncia dos usuï¿½rios e contribuir para a reduï¿½ï¿½o do congestionamento urbano. Neste projeto, exploraremos como a integraï¿½ï¿½o desses componentes pode criar uma soluï¿½ï¿½o inteligente e eficaz para o estacionamento nas cidades, beneficiando tanto os motoristas quanto a gestï¿½o urbana.
 </div>
 
 ## Objetivos
 
--	Redução do tempo gasto na busca por vagas de estacionamento;
--	Contribuição para a redução do trânsito e da poluição do ar nas cidades; 
--	Coleta de dados valiosos para análise de tendências de uso do estacionamento;
--	Demonstrar como a integração de tecnologias como IoT podem ser aplicadas de forma prática e benéfica para resolver desafíos urbanos.
+- Reduï¿½ï¿½o do tempo gasto na busca por vagas de estacionamento;
+- Contribuiï¿½ï¿½o para a reduï¿½ï¿½o do trï¿½nsito e da poluiï¿½ï¿½o do ar nas cidades;
+- Coleta de dados valiosos para anï¿½lise de tendï¿½ncias de uso do estacionamento;
+- Demonstrar como a integraï¿½ï¿½o de tecnologias como IoT podem ser aplicadas de forma prï¿½tica e benï¿½fica para resolver desafï¿½os urbanos.
 
 ## Recursos do Projeto
 
--	O Microcontrolador ESP32
--	APIs da Plataforma InterSCity que receberá os dados simulados do ESP32;
--	A plataforma InterSCity que armazenará esses dados e permitirá a análise e visualização das informações simuladas de ocupação das vagas;
--	Computadores, protoboard, jumpers, resistores são os recursos de hardware usados para desenvolver, testar e programar o ESP32.
+- O Microcontrolador ESP32
+- APIs da Plataforma InterSCity que receberï¿½ os dados simulados do ESP32;
+- A plataforma InterSCity que armazenarï¿½ esses dados e permitirï¿½ a anï¿½lise e visualizaï¿½ï¿½o das informaï¿½ï¿½es simuladas de ocupaï¿½ï¿½o das vagas;
+- Computadores, protoboard, jumpers, resistores sï¿½o os recursos de hardware usados para desenvolver, testar e programar o ESP32.
 
 ## Equipe
+
 - Adrielle Campelo Cunha;
 - Alysson Pereira;
 - Arthur Sampaio.
 - Daniel Campos Galdez;
 
-# Documentação
+# Documentaï¿½ï¿½o
 
 - [InterSCity](https://interscity.org/software/interscity-platform/)
 - [API InterSCity](https://gitlab.com/interscity/interscity-platform/resource-adaptor/-/wikis/home)
