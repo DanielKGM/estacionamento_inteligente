@@ -5,7 +5,7 @@ Estacionamento Inteligente com Integração Interscity
 ## Sobre o Projeto
 
 <div style="text-align: justify">
-Estacionamento Inteligente com Integração Interscity é uma iniciativa que visa transformar a maneira como os estacionamentos urbanos são gerenciados e como os motoristas interagem com eles. O projeto envolve o desenvolvimento de uma simulação de rede de computadores para um sistema de estacionamento inteligente que integra um microcontrolador. Este microcontrolador envia dados para a plataforma Interscity, atualizando o status de ocupação das vagas. Dessa forma, busca-se otimizar a alocação de vagas, melhorar a experiência dos usuários e contribuir para a redução do congestionamento urbano. Neste projeto, exploraremos como a integração desses componentes pode criar uma solução inteligente e eficaz para o estacionamento nas cidades, beneficiando tanto os motoristas quanto a gestão urbana.
+Este trabalho propõe o desenvolvimento de um sistema de estacionamento inteligente para enfrentar o crescente desafio da gestão de vagas em áreas urbanas. A solução visa otimizar a utilização de espaços disponíveis, reduzir o tempo de busca por vagas e diminuir o tráfego e emissões de poluentes. A abordagem inclui o uso de microcontroladores de baixo custo e protocolos de comunicação leves, integrados a uma arquitetura de microsserviços, o que garante eficiência, flexibilidade e escalabilidade em cidades inteligentes e sustentáveis.
 </div>
 
 ## Objetivos
@@ -20,14 +20,7 @@ Estacionamento Inteligente com Integração Interscity é uma iniciativa que vis
 - Microcontrolador ESP32;
 - APIs da Plataforma InterSCity que receberão os dados simulados do ESP32;
 - Plataforma InterSCity para armazenamento, análise e visualização das informações simuladas de ocupação das vagas;
-- Hardware utilizado para o desenvolvimento e teste do ESP32, incluindo computadores, protoboard, jumpers e resistores.
-
-## Equipe
-
-- Adrielle Campelo Cunha
-- Alysson Pereira
-- Arthur Sampaio
-- Daniel Campos Galdez
+- Protoboards, DIP switchs, LEDS, jumpers e resistores.
 
 ## Documentação
 
@@ -38,3 +31,11 @@ Estacionamento Inteligente com Integração Interscity é uma iniciativa que vis
 
 - [DataSheet: ESP32](https://pdf1.alldatasheet.com/datasheet-pdf/view/1243003/ESPRESSIF/ESP32.html)
 - [AllDataSheet](https://www.alldatasheet.com/)
+
+## Diagrama elétrico:
+
+<img src="diagrama.png" width="40%" height="40%"/>
+
+## Montagem do protótipo:
+
+<img src="circuito.jpg" width="40%" height="40%"/>
