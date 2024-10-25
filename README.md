@@ -1,7 +1,3 @@
-# Estacionamento Inteligente
-
-Estacionamento Inteligente com Integração Interscity
-
 ## Sobre o Projeto
 
 <div style="text-align: justify">
