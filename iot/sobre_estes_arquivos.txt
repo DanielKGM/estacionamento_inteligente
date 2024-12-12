@@ -1,0 +1,4 @@
+Aqui estão dois arquivos necessários pelo estacionamento:
+
+SKETCH é o código embarcado em C necessário para enviar mensagens à um broker intermediário
+COLAB.py é um exemplo de script em Python que recupera os dados do broker e compartilha com cidadesinteligentes.lsdi.ufma.br
