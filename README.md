@@ -1,5 +1,11 @@
 ## [PASSO A PASSO INTEGRAÇÃO INTERSCITY (GOOGLE COLAB)](https://colab.research.google.com/drive/1nNmYsLmdhfWfpuL7gf7CawPfPEXwD7BL?usp=sharing)
 
+Clique no LINK acima para ver a implementação passo a passo da integração de uma ESP32 à API do InterSCity, por intermédio de um programa em Python
+
+## Artigo
+
+[SMART PARKING SYSTEM: IoT INTEGRATION AND SMART CITY PLATFORM FOR SUSTAINABLE MANAGEMENT](https://monografias.ufma.br/jspui/bitstream/123456789/9205/1/DanielCampos.pdf)
+
 ## Sobre o Projeto
 
 <div style="text-align: justify">
@@ -32,8 +38,8 @@ Este trabalho propõe o desenvolvimento de um sistema de estacionamento intelige
 
 ## Diagrama elétrico:
 
-<img src="diagrama.png" width="40%" height="40%"/>
+<img src="iot/diagrama.png" width="40%" height="40%"/>
 
 ## Montagem do protótipo:
 
-<img src="circuito.jpg" width="40%" height="40%"/>
+<img src="iot/circuito.jpg" width="40%" height="40%"/>
